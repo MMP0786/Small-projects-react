@@ -19,10 +19,11 @@ function TodoApp(props) {
 
   return (
     <div>
-        <TodoAdd task11={"task"}/>
-        {/* <TodoAdd name={"musharraf"}/> */}
-        <TodoMain name={"musharraf"}/>
-        <TodoMain/>
+        <TodoAdd />
+        {
+            task.map(ele=> <TodoMain key={ele.id} ele={ele}/>)
+        }
+        
     </div>
   )
 }
