@@ -7,7 +7,7 @@ function TodoApp(props) {
     const task = [
         {
             id:1,
-            complete: false,
+            complete: true,
             task: "Take dose"
         },
         {
