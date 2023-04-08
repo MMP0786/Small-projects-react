@@ -4,7 +4,7 @@ function TodoAdd() {
   return (
     <div>
         <form >
-            <input type="text" />
+            <input type="text" width={70}/>
             <input type="submit" value={"Add"} />
         </form>
     </div>
