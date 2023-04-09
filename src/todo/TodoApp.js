@@ -21,10 +21,10 @@ function TodoApp(props) {
 
     },[task])
 
-    // useEffect(()=>{
-    //    const t =JSON.parse(localStorage.getItem("todos"))
-    //    setTask(()=>t)
-    // },[])
+    useEffect(()=>{
+       const t =JSON.parse(localStorage.getItem("todos"))
+       setTask(()=>t)
+    },[])
     
     const addTask = (task) => {
         setTask(tasks => {
