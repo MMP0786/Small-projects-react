@@ -15,6 +15,7 @@ function AutoCounter() {
     <div>
         <p>{count}</p>
         <button>Start</button>
+        
     </div>
   )
 }
