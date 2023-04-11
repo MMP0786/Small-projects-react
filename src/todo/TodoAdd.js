@@ -7,8 +7,8 @@ const [add, setAdd] = useState("")
   const handleSubmit = (e)=>{
     e.preventDefault()
      props.addTask({
+          id: uuid(),
          task: add,
-         id: uuid(),
          complete: false
        })
        setAdd("")
