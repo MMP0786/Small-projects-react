@@ -11,8 +11,7 @@ const [add, setAdd] = useState("")
          task: add,
          complete: false
        })
-       setAdd("")
-  }
+       setAdd("")}
   return (
     <div>
         <form onSubmit={handleSubmit}>
