@@ -1,6 +1,9 @@
 import React from 'react'
 
 function CreateTodo() {
+  const handleSubmit = ()=>{
+    
+  }
   return (
     <div>
       <form onSubmit={handleSubmit}>
