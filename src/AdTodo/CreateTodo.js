@@ -2,7 +2,12 @@ import React from 'react'
 
 function CreateTodo() {
   return (
-    <div>CreateTodo</div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='Add to do'/>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   )
 }
 

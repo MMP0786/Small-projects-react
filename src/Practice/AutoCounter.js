@@ -11,10 +11,19 @@ function AutoCounter() {
          }) 
       }, 1000);
       document.querySelector(".start").setAttribute("disabled", true)
-
+      
       document.querySelector(".stop").addEventListener("click", ()=>{
         clearInterval(intervel)
-        console.log(intervel)
+        // console.log(intervel)
+        document.querySelector(".start").removeAttribute("disabled")
+
+      })
+      document.querySelector(".reset").addEventListener("click", ()=>{
+        clearInterval(intervel)
+        setCount(0);
+        // console.log(intervel)
+        document.querySelector(".start").removeAttribute("disabled")
+
       })
     }
     
@@ -23,6 +32,7 @@ function AutoCounter() {
         <p>{count}</p>
         <button onClick={start} className='start'>Start</button>
         <button className='stop'>Stop</button>
+        <button className='reset'>Reset</button>
         
     </div>
   )

@@ -1,8 +1,12 @@
 import React from 'react'
+import CreateTodo from "./CreateTodo"
 
 function Todo() {
   return (
-    <div>Todo</div>
+    <div>
+      <CreateTodo/>
+      <Task/>
+    </div>
   )
 }
 
