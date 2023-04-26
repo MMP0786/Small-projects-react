@@ -13,10 +13,39 @@ function Todo() {
       status: false
     }
   ])
+  const addTask = (index)=>{
+    setTasks((task1)=>{
+      const newTask = [...task1]
+      newTask[index].status= true
+      return newTask
+    })
+  }
+  const addTask1 = (value)=>{
+    setTasks((task)=>{
+      const newTask = [...task, value]
+      return newTask
+    })
+  }
+
+  const removeTask = (index)=>{
+    setTasks(task=>{
+      const newTask = [...task]
+      newTask.splice(index, 1)
+      return newTask
+    })
+  }
+
+  // const editTask = (index)=>{
+  //   setTasks((task1)=>{
+  //     const newTask = [...task1]
+  //     newTask[index].status= true
+  //     return newTask
+  //   })
+  // }
   return (
     <div>
-      <CreateTodo/>
-      {tasks.map((task, index)=><Task {...task} key={index} /> )}
+      <CreateTodo addTask1={addTask1} />
+      {tasks.map((task, index)=><Task  removeTask={removeTask} addTask={addTask} {...task} key={index} index={index}/> )}
     </div>
   )
 }

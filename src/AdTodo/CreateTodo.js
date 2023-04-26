@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Task from './Task';
 
-function CreateTodo() {
-  const handleSubmit = ()=>{
-    
+function CreateTodo(props) {
+  const [value, setValue] = useState('')
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    props.addTask1({
+      task: value,
+      status: false
+    })
+    setValue("")
   }
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='Add to do'/>
-        <input type="submit" value="Submit" />
+        <input type="text" placeholder='Add to do' 
+        value={value} 
+        onChange={(e)=> setValue(e.target.value)}/>
+        <input type="submit" value="Add" />
       </form>
+      
     </div>
   )
 }
