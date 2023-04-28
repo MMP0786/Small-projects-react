@@ -40,6 +40,7 @@ function Todo() {
       const newTask = [...task1]
       newTask[index].status= true
       return newTask
+      
     })
   }
   return (
