@@ -35,13 +35,13 @@ function Todo() {
     })
   }
 
-  // const editTask = (index)=>{
-  //   setTasks((task1)=>{
-  //     const newTask = [...task1]
-  //     newTask[index].status= true
-  //     return newTask
-  //   })
-  // }
+  const editTask = (index)=>{
+    setTasks((task1)=>{
+      const newTask = [...task1]
+      newTask[index].status= true
+      return newTask
+    })
+  }
   return (
     <div>
       <CreateTodo addTask1={addTask1} />
