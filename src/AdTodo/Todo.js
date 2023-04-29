@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CreateTodo from "./CreateTodo"
 import Task from "./Task"
 
@@ -43,6 +43,10 @@ function Todo() {
       
     })
   }
+
+  useEffect(()=> {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks])
   return (
     <div>
       <CreateTodo addTask1={addTask1} />
