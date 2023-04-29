@@ -45,8 +45,12 @@ function Todo() {
   }
 
   useEffect(()=> {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
+    localStorage.setItem("tak", JSON.stringify(tasks))
   }, [tasks])
+
+  useEffect(()=> {
+    localStorage.getItem("tak")
+  },[])
   return (
     <div>
       <CreateTodo addTask1={addTask1} />
