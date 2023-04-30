@@ -3,7 +3,16 @@ import CreateTodo from "./CreateTodo"
 import Task from "./Task"
 
 function Todo() {
+  const [value, setValue] = useState("")
   const [tasks, setTasks]= useState([
+    {
+      task: "Eating food",
+      status: true
+    },
+    {
+      task: "Eating Fruits",
+      status: false
+    }
    
   ])
   const addTask = (index)=>{
@@ -27,16 +36,17 @@ function Todo() {
       return newTask
     })
   }
-
+// console.log(tasks)
   const editTask = (index)=>{
-    setTasks((task1)=>{
-      const newTask = [...task1]
-      newTask[index].status= true
-      return newTask
+    setValue(()=>{
+        // console.log(taskss)
+      let value = tasks[index].task
+      // console.log("val", value)
+      return value;
       
     })
   }
-
+// console.log(editTask())
   useEffect(()=> {
     localStorage.setItem("tak", JSON.stringify(tasks))
   }, [tasks])
@@ -49,10 +59,14 @@ function Todo() {
     console.log("tasks", tasks)                                            
     console.log(t)                                            
   },[])
+
+  // const callback  = (childData )=>{
+  //   let value = childData
+  // }
   return (
     <div>
-      <CreateTodo addTask1={addTask1} />
-      {tasks.map((task, index)=><Task  removeTask={removeTask} addTask={addTask} {...task} key={index} index={index}/> )}
+      <CreateTodo addTask1={addTask1} value={value} />
+      {tasks.map((task, index)=><Task  editTask={editTask} removeTask={removeTask} addTask={addTask} {...task} key={index} index={index}/> )}
     </div>
   )
 }

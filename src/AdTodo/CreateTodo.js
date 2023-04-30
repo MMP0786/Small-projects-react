@@ -14,8 +14,9 @@ function CreateTodo(props) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        {/* {setValue(props.value)} */}
         <input type="text" placeholder='Add to do' 
-        value={value} 
+        value={props.value ? props.value: value} 
         onChange={(e)=> setValue(e.target.value)}/>
         <input type="submit" value="Add" />
       </form>

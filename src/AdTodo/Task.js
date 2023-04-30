@@ -9,7 +9,7 @@ const removeTask = ()=>{
   props.removeTask(props.index)
 }
 const handleEdit = ()=>{
-  props.removeTask(props.index)
+  props.editTask(props.index)
 }
   return (
     <div style={{width:"50%", border:"1px solid black", margin:"10px auto", display:"flex", justifyContent:"space-between"}}>
