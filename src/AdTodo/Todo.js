@@ -4,14 +4,7 @@ import Task from "./Task"
 
 function Todo() {
   const [tasks, setTasks]= useState([
-    {
-      task: "Reading book",
-      status: true
-    },
-    {
-      task: "Write book",
-      status: false
-    }
+   
   ])
   const addTask = (index)=>{
     setTasks((task1)=>{
@@ -49,7 +42,12 @@ function Todo() {
   }, [tasks])
 
   useEffect(()=> {
-    localStorage.getItem("tak")
+    let t = localStorage.getItem("tak")
+    t=JSON.parse(t)
+    setTasks(t) 
+    
+    console.log("tasks", tasks)                                            
+    console.log(t)                                            
   },[])
   return (
     <div>
