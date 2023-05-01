@@ -4,14 +4,16 @@ import TodoApp from './todo/TodoApp';
 import One from './Practice/One';
 import AutoCounter from './Practice/AutoCounter';
 import Todo from './AdTodo/Todo';
+import ColorShadow from './ColorShadow/ColorShadow';
 
 function App() {
-  const transer = ()=>{
-    console.log("from app")
-  }
+  // const transer = ()=>{
+  //   console.log("from app")
+  // }
   return (
     <div className="App">
-      <Todo/>
+      <ColorShadow/>
+      {/* <Todo/> */}
       {/* <One name1="Musharraf" data={transer}/>
       <AutoCounter/> */}
       {/* <TodoApp/> */}
