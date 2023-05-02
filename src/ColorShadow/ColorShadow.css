@@ -1,5 +1,12 @@
 .containor{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
 
+.box{
+    background: red;
+    height: 100px;
+    width: 100px;
 }
