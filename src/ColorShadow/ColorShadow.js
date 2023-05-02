@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./ColorShadow.css"
 
 function ColorShadow() {
+  const [hori, setHori] = useState(0)
+  const [ver, setVer] = useState(0)
+  const [blur, setBlur] = useState(0)
   return (
     <div className='containor'>
         <div>
