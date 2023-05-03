@@ -5,6 +5,7 @@ import One from './Practice/One';
 import AutoCounter from './Practice/AutoCounter';
 import Todo from './AdTodo/Todo';
 import ColorShadow from './ColorShadow/ColorShadow';
+import ImageSearch from './ImageSearch/ImageSearch';
 
 function App() {
   // const transer = ()=>{
@@ -12,7 +13,8 @@ function App() {
   // }
   return (
     <div className="App">
-      <ColorShadow/>
+      <ImageSearch/>
+      {/* <ColorShadow/> */}
       {/* <Todo/> */}
       {/* <One name1="Musharraf" data={transer}/>
       <AutoCounter/> */}

@@ -1,0 +1,7 @@
+.containor{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 1px 1px 5px grey;
+    height: 50px;
+    margin-top: -100px;
+}
