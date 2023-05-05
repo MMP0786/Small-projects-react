@@ -7,9 +7,7 @@ function ImageSearch() {
     const createApp =()=>{
         fetch(`https://api.unsplash.com/photos/?client_id=g9aPf75dMHkH7kC6sPudcz6T0HnzR-kakVip_dc1ZGw&query=${value}`)
         .then(res=>res.json()
-        ).then(data=>{
-            console.log(data)
-        })
+        ).then(data=>console.log(data))
     }
   return (
     <div className='containor'>
