@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function Task(props) {
 const handleMark = ()=>{
@@ -11,6 +11,8 @@ const removeTask = ()=>{
 const handleEdit = ()=>{
   props.editTask(props.index)
 }
+
+console.log("second")
   return (
     <div style={{width:"50%", border:"1px solid black", margin:"10px auto", display:"flex", justifyContent:"space-between"}}>
      
@@ -26,4 +28,4 @@ const handleEdit = ()=>{
   )
 }
 
-export default Task
+export default memo(Task); 

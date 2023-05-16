@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import CreateTodo from "./CreateTodo"
 import Task from "./Task"
 
@@ -15,27 +15,38 @@ function Todo() {
     }
    
   ])
-  const addTask = (index)=>{
+  const addTask = useCallback((index)=>{
     setTasks((task1)=>{
       const newTask = [...task1]
       newTask[index].status= true
+      console.log("inside addTask")
       return newTask
     })
-  }
-  const addTask1 = (value)=>{
+  },[])
+  const addTask1 = useCallback((value)=>{
     setTasks((task)=>{
       const newTask = [...task, value]
       return newTask
     })
-  }
+  },[])
 
   const removeTask = (index)=>{
     setTasks(task=>{
       const newTask = [...task]
       newTask.splice(index, 1)
+      console.log("inside remove")
       return newTask
     })
   }
+const value1 = useMemo(()=>{
+  let count =0;
+  for(let i =0; i<=1000000000; i++){
+    count += i;
+
+  }
+}, [])
+console.log(value1)
+  // console.log("other task")
 // console.log(tasks)
   const editTask = (index)=>{
     setValue(()=>{
@@ -65,10 +76,10 @@ function Todo() {
   // }
   return (
     <div>
-      <CreateTodo addTask1={addTask1} value={value} />
+      <CreateTodo addTask1={addTask1}  />
       {tasks.map((task, index)=><Task  editTask={editTask} removeTask={removeTask} addTask={addTask} {...task} key={index} index={index}/> )}
     </div>
   )
 }
 
-export default Todo
+export default memo(Todo) 

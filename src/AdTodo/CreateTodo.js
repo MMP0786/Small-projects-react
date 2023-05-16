@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import Task from './Task';
 
 function CreateTodo(props) {
@@ -11,6 +11,7 @@ function CreateTodo(props) {
     })
     setValue("")
   }
+  console.log("first")
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -25,4 +26,4 @@ function CreateTodo(props) {
   )
 }
 
-export default CreateTodo
+export default memo(CreateTodo);

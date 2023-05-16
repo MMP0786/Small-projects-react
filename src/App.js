@@ -15,11 +15,11 @@ function App() {
   // }
   return (
     <div className="App">
-      <AutoCounter1/>
+      {/* <AutoCounter1/> */}
       {/* <AddDark/> */}
       {/* <ImageSearch/> */}
       {/* <ColorShadow/> */}
-      {/* <Todo/> */}
+      <Todo/>
       {/* <One name1="Musharraf" data={transer}/>
       <AutoCounter/> */}
       {/* <TodoApp/> */}
